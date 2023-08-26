@@ -1,0 +1,201 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: url(./bg.png) no-repeat;
+    background-size: cover;
+    /*充满整个区域*/
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*居中*/
+    align-items: center;
+    width: 360px;
+    height: 390px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    /*模糊*/
+    background-color: rgba(50, 50, 50, 0.4);
+    position: absolute;
+    top: 120px;
+    border-radius: 15px;
+}
+
+/*login*/
+h2 {
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 20px;
+    font-size: 30px;
+}
+
+/*账号*/
+.box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: absolute;
+    top: 105px;
+}
+
+.box1>label {
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+}
+
+.box1>input {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    height: 35px;
+    width: 250px;
+    background-color: rgba(160, 160, 160, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+    outline: none;
+    padding: 0 10px;
+}
+
+.box1>input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.box1>div {
+    /* background-color: rgba(160, 160, 160, 0.3);
+    border: 1px solid rgba(255,255,255,0.3);    */
+    width: 240px;
+    height: 15px;
+    margin-top: -3px;
+    margin-left: 10px;
+    color: rgba(240, 40, 0, 0.8);
+    font-size: 10px;
+    display: none;
+}
+
+/*密码*/
+.box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: absolute;
+    top: 180px;
+    margin-bottom: 10px;
+}
+
+.box2>label {
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+}
+
+.box2>input {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 14px;
+    height: 35px;
+    width: 250px;
+    background-color: rgba(160, 160, 160, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+    outline: none;
+    padding: 0 10px;
+}
+
+.box2>input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.box2>img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.box2>div {
+    /* background-color: rgba(160, 160, 160, 0.3);
+   border: 1px solid rgba(255,255,255,0.3);     */
+    width: 240px;
+    height: 15px;
+    margin-top: -4px;
+    margin-left: 10px;
+    color: rgba(240, 40, 0, 0.8);
+    font-size: 10px;
+    display: none;
+}
+
+/*忘记密码*/
+a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.2s;
+    width: 250px;
+    text-align: end;
+    position: absolute;
+    top: 255px;
+    left: -35%;
+}
+
+a:hover {
+    color: blue;
+    font-size: 13px;
+}
+
+/*登录*/
+.submit {
+    width: 120px;
+    height: 35px;
+    border: 1px solid rgba(197, 81, 58, 0.8);
+    background-color: rgba(197, 81, 58, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    position: absolute;
+    top: 300px;
+    left: 15%;
+}
+
+.submit:hover {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}
+
+/*注册*/
+.register {
+    width: 120px;
+    height: 35px;
+    border: 1px solid rgba(197, 81, 58, 0.8);
+    background-color: rgba(197, 81, 58, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    position: absolute;
+    top: 45px;
+    left: 125%;
+
+}
+
+.register:hover {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}

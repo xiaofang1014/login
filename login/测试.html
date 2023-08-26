@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+  }
+  
+ .outer {
+    background-color: #8e44ad;
+    color: #fff;
+    font-family: 'Roboto Mono', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+  }
+  
+  .counter {
+    font-size: 60px;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 580px) {
+    .outer {
+      flex-direction: column;
+    }
+  }
+
+</style>
+<body>
+    <div class="outer">
+        <div class="counter-container">
+          <i class="iconfont icon-Basket-Ball" style="font-size:50px"></i>
+          <div class="counter" data-set="37062"></div>
+          <span>常规赛总得分</span>
+        </div>
+    
+        <div class="counter-container">
+          <i class="iconfont icon-BasketballHoop" style="font-size:50px"></i>
+          <div class="counter" data-set="10210"></div>
+          <span>常规赛总篮板</span>
+        </div>
+    
+        <div class="counter-container">
+          <i class="iconfont icon-assistant" style="font-size:50px"></i>
+          <div class="counter" data-set="10045"></div>
+          <span>常规赛总助攻</span>
+        </div>
+      </div>
+    
+      <script>
+let counters = document.querySelectorAll('.counter')  //获取到三个counter盒子
+counters.forEach(item => {
+    item.innerText = '0'  //记录分数变化的变量，初始值为0
+
+    const updateData = () => {
+        const data = +item.getAttribute('data-set')  //获取到元素中绑定的数据
+        const tmp = +item.innerText //临时变量保存变化一次的数据量
+    
+        const changeData = data / 2000  //设置改变的速率
+
+        if(tmp < data) {  //如果临时变量的值小于最终数据的值，那么就给元素进行数据相加
+            item.innerText = `${Math.ceil(tmp + changeData)}`  //值数相加，然后进行取整
+            setTimeout(updateData,1)  //定时器传入回调函数目的在于动态变化
+        } else {
+            item.innerText = data  //不满足条件后，证明得到了最终数据，直接渲染
+        }
+
+    }
+    updateData()  //调用函数，启动函数
+})
+
+      </script>
+</body>
+</html>

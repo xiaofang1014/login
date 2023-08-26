@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="./files/register/register.css">
+</head>
+
+<body>
+
+    </head>
+
+    <body>
+        <div class="box">
+            <h2>Login</h2>
+            <div class="box1">
+                <label for="">账号</label>
+                <input type="text" placeholder="请输入你的账号名" id="username" name="username" />
+                <div class="name_label" id="name_bug"></div>
+            </div>
+            <div class="box2">
+                <label for="">密码</label>
+                <input type="password" placeholder="请输入你的密码" id="password" name="password" />
+                <img id="eye1" src="./img/close.png" onclick="anniu1()" onclick="checkForm()"
+                    style="width: 25px; height: 25px;">
+                <div class="password_label" id="password_bug"></div>
+            </div>
+            <div class="box3">
+                <label>确认密码</label>
+                <input type="password" placeholder="请再次输入你的密码" id="two_password" name="two_password" />
+                <img id="eye2" src="./img/close.png" onclick="anniu2()" onclick="checkForm()"
+                    style="width: 25px; height: 25px;">
+                <div class="two_password_label" id="two_password_bug"></div>
+            </div>
+            <div>
+                <a href="./login.html" style="position: absolute;top: 330px;left: 145px;">已有账号？</a>
+            </div>
+            </form>
+
+            <button type="submit" onclick="checkForm()">确认注册</button>
+        </div>
+        <!-- <script type="text/javascript" src="jquery-1.12.4.min.js"></script> -->
+        <script type="text/javascript" src="./files/register/register.js"></script>
+        <script type="text/javascript">
+
+        </script>
+    </body>
+
+</html>

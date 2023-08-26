@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" href="./files/login/login.css">
+</head>
+
+<body>
+    <div class="box">
+        <h2>Login</h2>
+        <div class="box1">
+            <label for="">账号</label>
+            <input type="text" placeholder="请输入你的账号名" id="username" name="username" />
+            <div class="name_label" id="name_bug"></div>
+        </div>
+        <div class="box2">
+            <label for="">密码</label>
+            <input type="password" placeholder="请输入你的密码" id="password" name="password" />
+            <img id="eye" src="./img/close.png" onclick="anniu()">
+            <div class="password_label" id="password_bug"></div>
+        </div>
+        <div class="box3">
+            <a href="./seek.html">修改密码？</a>
+            <div>
+                <button class="submit" onclick="checkForm()">登录</button>
+                <a href="./register.html"><button class="register">注册</button></a>
+                <div class="submit_label" id="submit_ok" style=" width: 200px;height: 40px; text-align: center;
+                color: rgba(122, 227, 139, 0.9); position: absolute; bottom:12px;  left: 83px; display: none;"> </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./data/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./files/login/login.js"></script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>
